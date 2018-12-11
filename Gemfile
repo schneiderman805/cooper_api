@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) do { |cooper_api| 
+git_source(:github) do |cooper_api| 
   cooper_api = "#{cooper_api}/#{cooper_api}" unless cooper_api.include?("/")
   "https://github.com/#{cooper_api}.git"
 end
@@ -23,7 +23,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen', '~>= 3.0.5',
+  gem 'listen', '>= 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
